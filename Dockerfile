@@ -28,7 +28,7 @@ ENV NODE_OPTIONS=--max-old-space-size=8192
 WORKDIR /usr/src/flowise
 
 # Copy app source
-COPY . .
+COPY --chown=node:node . .
 
 # Install dependencies and build
 RUN pnpm install && \
